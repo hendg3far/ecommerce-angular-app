@@ -1,0 +1,173 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+
+/* ------------ Font Weights -------------- */
+$font-weights: (
+    li: 300,
+    rg: 400,
+    md: 500,
+    sb: 600,
+    bd: 700
+);
+
+:root {
+    --font-family-main: 'Montserrat', sans-serif;
+
+    @each $name, $weight in $font-weights {
+        --fw-#{$name}: #{$weight};
+    }
+}
+
+@each $name, $weight in $font-weights {
+    .fw-#{$name} {
+        font-family: var(--font-family-main);
+        font-weight: var(--fw-#{$name});
+    }
+}
+
+/* ------------ Font Sizes -------------- */
+$font-sizes: (
+    xs: 10px,
+    sm: 13px,
+    rg: 14px,
+    md: 16px,
+    lg: 18px,
+    xl: 20px
+);
+
+:root {
+    @each $size, $value in $font-sizes {
+        --fs-#{$size}: #{$value};
+    }
+}
+
+@each $size, $value in $font-sizes {
+    .fs-#{$size} {
+        font-size: var(--fs-#{$size});
+    }
+}
+
+/* ------------ Colors -------------- */
+:root {
+    --black-color: #000000;
+    --dark-color: #0a111e;
+    --white-color: #ffffff;
+    --primary-color: #2874fc;
+    --dark-primary-color: #020381;
+    --secondary-color: #f5c949;
+    --dark-secondary-color: #c29f38;
+    --gray-color: #666666;
+    --light-color: #f7f7f7;
+    --border-color: #ededed;
+    --linear-gradient: linear-gradient(135deg, #020381 0%, #2874fc 100%);
+}
+
+$colors: primary, light, secondary, black, white, gray, dark, dark-primary, dark-secondary;
+
+@each $name in $colors {
+    .text-#{$name}-color {
+        color: var(--#{$name}-color);
+
+        &__hover:hover {
+            color: var(--#{$name}-color);
+        }
+    }
+
+    .bg-#{$name}-color {
+        background-color: var(--#{$name}-color);
+
+        &__hover:hover {
+            background-color: var(--#{$name}-color);
+        }
+    }
+}
+
+.bg-linear {
+    background-image: var(--linear-gradient);
+}
+
+/* ============================
+   GAP SYSTEM
+============================ */
+$gaps: (
+    sm: 5px,
+    rg: 10px,
+    md: 20px,
+    lg: 30px,
+    xl: 50px
+);
+
+:root {
+    @each $gap, $value in $gaps {
+        --gap-#{$gap}: #{$value};
+    }
+}
+
+@each $gap, $value in $gaps {
+    .gap-#{$gap} {
+        gap: var(--gap-#{$gap});
+    }
+
+    .row-gap-#{$gap} {
+        row-gap: var(--gap-#{$gap});
+    }
+
+    .column-gap-#{$gap} {
+        column-gap: var(--gap-#{$gap});
+    }
+}
+
+
+/* ============================
+   SPACING SYSTEM (PADDING & MARGIN)
+============================ */
+$spaces: (
+    xs: 10px,
+    sm: 15px,
+    rg: 25px,
+    md: 35px,
+    lg: 55px,
+    xl: 75px,
+    xxl: 100px
+);
+
+:root {
+    @each $space, $value in $spaces {
+        --space-#{$space}: #{$value};
+    }
+}
+
+@each $space, $value in $spaces {
+    .pt-#{$space} {
+        padding-top: var(--space-#{$space});
+    }
+
+    .pb-#{$space} {
+        padding-bottom: var(--space-#{$space});
+    }
+
+    .mt-#{$space} {
+        margin-top: var(--space-#{$space});
+    }
+
+    .mb-#{$space} {
+        margin-bottom: var(--space-#{$space});
+    }
+
+    /* Y-axis padding */
+    .py-#{$space} {
+        padding-top: var(--space-#{$space});
+        padding-bottom: var(--space-#{$space});
+    }
+}
+
+
+/* ============================
+   TRANSITIONS
+============================ */
+:root {
+    --transition-fast: 0.2s;
+    --transition-medium: 0.4s;
+    --transition-slow: 0.6s;
+    --transition-effect: ease-in-out;
+}
