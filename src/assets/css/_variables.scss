@@ -62,7 +62,17 @@ $font-sizes: (
     --linear-gradient: linear-gradient(135deg, #020381 0%, #2874fc 100%);
 }
 
-$colors: primary, light, secondary, black, white, gray, dark, dark-primary, dark-secondary;
+$colors: (
+    "primary",
+    "light",
+    "secondary",
+    "black",
+    "white",
+    "gray",
+    "dark",
+    "dark-primary",
+    "dark-secondary"
+);
 
 @each $name in $colors {
     .text-#{$name}-color {
@@ -81,6 +91,7 @@ $colors: primary, light, secondary, black, white, gray, dark, dark-primary, dark
         }
     }
 }
+
 
 .bg-linear {
     background-image: var(--linear-gradient);

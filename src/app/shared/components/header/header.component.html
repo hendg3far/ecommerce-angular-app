@@ -1,0 +1,308 @@
+<header class="bg-linear pt-sm">
+    <div class="container-fluid">
+        <div class="mb-sm">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-4">
+                    <a [routerLink]="['/']"><img width="150" src="assets/media/logo-3.svg" alt="logo"></a>
+                </div>
+
+                <div class="col-lg-6 d-lg-block d-none">
+                    <div class="d-flex gap-3">
+                        <form class="w-100">
+                            <div class="position-relative">
+                                <input id="searchInput" type="text" class="form-control form-control-md rounded-1"
+                                    placeholder="Enter Your Keyword">
+                                <button
+                                    class="btn border-0 position-absolute top-0 end-0 h-100 text-dark-color text-dark-color__hover"><i
+                                        class="icofont-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-8">
+                    <div class="d-flex  justify-content-end align-items-center">
+
+                        <div class="d-flex align-items-center justify-content-end gap-lg-4 gap-3">
+                            <a href="" class="text-white-color d-lg-none d-inline" data-bs-toggle="modal"
+                                data-bs-target="#searchModal">
+                                <!--?xml version="1.0" encoding="utf-8"?-->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_15_152)">
+                                        <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor"
+                                            stroke-linejoin="round"></circle>
+                                        <path
+                                            d="M19.6464 20.3536C19.8417 20.5488 20.1583 20.5488 20.3536 20.3536C20.5488 20.1583 20.5488 19.8417 20.3536 19.6464L19.6464 20.3536ZM20.3536 19.6464L15.3536 14.6464L14.6464 15.3536L19.6464 20.3536L20.3536 19.6464Z"
+                                            fill="currentColor"></path>
+                                    </g>
+                                </svg>
+                            </a>
+
+                            <a href="#" class="text-white-color">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.84 4.61C20.3296 4.10003 19.7229 3.6934 19.0491 3.41526C18.3753 3.13713 17.6465 2.99313 16.91 2.99313C16.1736 2.99313 15.4447 3.13713 14.7709 3.41526C14.0971 3.6934 13.4904 4.10003 12.98 4.61L12 5.59L11.02 4.61C9.979 3.57 8.509 3 7 3C5.491 3 4.021 3.57 2.98 4.61C1.94 5.65 1.37 7.12 1.37 8.63C1.37 10.14 1.94 11.61 2.98 12.65L12 21.67L21.02 12.65C22.06 11.61 22.63 10.14 22.63 8.63C22.63 7.12 22.06 5.65 20.84 4.61Z"
+                                        stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </a>
+
+                            <div class="dropdown">
+                                <a class="text-white-color btn-cart" href="#" role="button" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside" aria-expanded="false">
+                                    <!--?xml version="1.0" encoding="utf-8"?-->
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_15_35)">
+                                            <path
+                                                d="M5.33331 6H19.8672C20.4687 6 20.9341 6.52718 20.8595 7.12403L20.1095 13.124C20.0469 13.6245 19.6215 14 19.1172 14H16.5555H9.44442H7.99998"
+                                                stroke="currentColor" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M2 4H4.23362C4.68578 4 5.08169 4.30341 5.19924 4.74003L8.30076 16.26C8.41831 16.6966 8.81422 17 9.26638 17H19"
+                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <circle cx="10" cy="20" r="1" stroke="currentColor" stroke-linejoin="round">
+                                            </circle>
+                                            <circle cx="17.5" cy="20" r="1" stroke="currentColor"
+                                                stroke-linejoin="round"></circle>
+                                        </g>
+                                    </svg>
+
+                                    <span class="items-no">2</span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-lg py-md">
+                                    <table class="table table-striped">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center size-img-cart">
+                                                    <a href="#">
+                                                        <!-- <img width="95" src="./assets/media/--products/9.webp"
+                                                            alt="no-photo" style="min-width: 95px;"> -->
+                                                    </a>
+                                                </td>
+                                                <td class="text-start d-flex flex-column">
+                                                    <a href="#" class="d-block mb-1 fs-sm">
+                                                        TOMMY HILFIGER Men's Mason Round Shape Silicone Strap
+                                                        ...</a>
+                                                    <span class="fs-xs">x 1</span>
+                                                    <span class="fw-md mt-2">122.00 <small class="fs-sm">Egp</small>
+                                                    </span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" title="Remove"
+                                                        class="btn icon-30 btn-light-color d-flex align-items-center justify-content-center border-0">
+                                                        <i class="fa-regular fa-trash-alt fs-sm"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center size-img-cart">
+                                                    <a href="#">
+                                                        <!-- <img width="95" src="./assets/media/--products/8.webp"
+                                                            alt="no-photo" style="min-width: 95px;"> -->
+                                                    </a>
+                                                </td>
+                                                <td class="text-start d-flex flex-column">
+                                                    <a href="#" class="d-block mb-1 fs-sm">
+                                                        TORNADO Electric Blender 500 Watt 1.5 Liter 2...</a>
+                                                    <span class="fs-xs">x 2</span>
+                                                    <span class="fw-md mt-2">10025.00 <small class="fs-sm">Egp</small>
+                                                    </span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" title="Remove"
+                                                        class="btn icon-30 btn-light-color d-flex align-items-center justify-content-center border-0">
+                                                        <i class="fa-regular fa-trash-alt fs-sm"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="d-flex justify-content-between px-4">
+                                        <a href="#" class="btn btn-sm btn-secondary-color border-0">View cart</a>
+                                        <a href="#" class="btn btn-sm btn-primary-color">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="text-white-color d-lg-none d-inline">
+                                <!--?xml version="1.0" encoding="utf-8"?-->
+                                <svg width="24" height="24" viewBox="0 -0.5 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.5 9C16.5 11.2091 14.7091 13 12.5 13C10.2909 13 8.5 11.2091 8.5 9C8.5 6.79086 10.2909 5 12.5 5C13.5609 5 14.5783 5.42143 15.3284 6.17157C16.0786 6.92172 16.5 7.93913 16.5 9Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M5.5 18.9999C9.78787 16.3408 15.2121 16.3408 19.5 18.9999"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                </svg>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <nav class="navbar navbar-expand-lg bg-white-color rounded-top-1 position-relative p-lg-0 py-2">
+            <div class="col-lg-9" style="max-width: 100%;">
+                <div class="NavigationScrollHandler_container px-sm-4 px-2">
+                    <button class="NavigationScrollHandler_arrow left" style="display: none;">❮</button>
+                    <div class="NavigationScrollHandler_content mx-4" id="navScroll">
+                        <ul class="SiteNavigationV3_wrapper">
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Electronics</a>
+                                <div class="dropdown-menu dropdown-menu-hover w-100 start-0 rounded-top-0">
+                                    <div class="container">
+                                        <div class="row row-gap-4">
+                                            <div class="col-lg-3">
+                                                <p><a class="fw-md text-uppercase" href="#">MOBILES &amp;
+                                                        ACCESSORIES</a></p>
+                                                <div class="d-flex flex-column">
+                                                    <div><a class="dropdown-item" href="#">iPhones</a></div>
+                                                    <div><a class="dropdown-item" href="#">Tablets</a></div>
+                                                    <div><a class="dropdown-item" href="#">Headsets &amp; Speakers</a>
+                                                    </div>
+                                                    <div><a class="dropdown-item" href="#">Power Banks</a></div>
+                                                    <div><a class="dropdown-item" href="#">Wearables</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p><a class="fw-md text-uppercase" href="#">LAPTOPS &amp;
+                                                        ACCESSORIES</a></p>
+                                                <div class="d-flex flex-column">
+                                                    <div><a class="dropdown-item" href="#">MacBooks</a></div>
+                                                    <div><a class="dropdown-item" href="#">Gaming Laptops</a></div>
+                                                    <div><a class="dropdown-item" href="#">Printers</a></div>
+                                                    <div><a class="dropdown-item" href="#">Monitors</a></div>
+                                                    <div><a class="dropdown-item" href="#">Input Devices</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p><a class="fw-md text-uppercase" href="#">GAMING ESSENTIALS</a>
+                                                </p>
+                                                <div class="d-flex flex-column">
+                                                    <div><a class="dropdown-item" href="#">Gaming Consoles</a></div>
+                                                    <div><a class="dropdown-item" href="#">Gaming Accessories</a>
+                                                    </div>
+                                                    <div><a class="dropdown-item" href="#">Video Games</a></div>
+                                                    <div><a class="dropdown-item" href="#">Gaming Monitors</a></div>
+                                                    <div><a class="dropdown-item" href="#">Digital Cards</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 d-lg-block d-none">
+                                                <img src="https://placehold.co/300x300/" alt="product name"
+                                                    loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Home Appliances</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Fashion</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Beauty</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Sports</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Automotive</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Toys</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Groceries</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Home Appliances</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Fashion</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Beauty</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Sports</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Automotive</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Toys</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Groceries</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Home Appliances</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Fashion</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Beauty</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Sports</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Automotive</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Toys</a>
+                            </li>
+                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Groceries</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="NavigationScrollHandler_arrow right" style="display: block;">❯</button>
+                </div>
+            </div>
+            <div class="col-lg-3 d-lg-block d-none">
+                <div class="d-flex justify-content-end pe-lg-4 pe-3 gap-sm-4 gap-3 ms-auto">
+                    <a href="">
+                        <span class="text-primary-color">
+                            <svg fill="currentColor" width="24" height="24" viewBox="0 0 1024 1024"
+                                xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path
+                                    d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1 520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span>Login</span>
+                    </a>
+                    <span style="height: 20px;width: 1px;background-color: #ededed;"></span>
+                    <a href="">
+                        <span class="text-primary-color">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6ZM12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8Z"
+                                    fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.0901 22.5958C11.2059 22.6753 11.2981 22.7366 11.3626 22.7788L11.4687 22.8472C11.7933 23.0504 12.2061 23.0508 12.5307 22.8476L12.6375 22.7788C12.7019 22.7366 12.7941 22.6753 12.9099 22.5958C13.1415 22.4367 13.4685 22.2041 13.8591 21.9041C14.6386 21.3054 15.6801 20.4322 16.7247 19.3336C18.7857 17.1661 21 13.9725 21 10.1818C21 7.75381 20.0571 5.42084 18.3719 3.69728C16.6859 1.97296 14.3943 1 12 1C9.60571 1 7.31415 1.97296 5.62814 3.69728C3.94288 5.42084 3 7.75381 3 10.1818C3 13.9725 5.21434 17.1661 7.27531 19.3336C8.31993 20.4322 9.36136 21.3054 10.1409 21.9041C10.5315 22.2041 10.8585 22.4367 11.0901 22.5958ZM12 3C10.1508 3 8.37273 3.75107 7.05815 5.09552C5.74283 6.44073 5 8.26992 5 10.1818C5 13.2007 6.78566 15.9162 8.72469 17.9554C9.68007 18.9602 10.6386 19.7646 11.3591 20.3179C11.6046 20.5065 11.8215 20.6651 12 20.7918C12.1785 20.6651 12.3954 20.5065 12.6409 20.3179C13.3614 19.7646 14.3199 18.9602 15.2753 17.9554C17.2143 15.9162 19 13.2007 19 10.1818C19 8.26992 18.2572 6.44073 16.9418 5.09552C15.6273 3.75107 13.8492 3 12 3Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="d-lg-inline d-none">Store locator</span>
+                    </a>
+                </div>
+            </div>
+        </nav> -->
+    </div>
+</header>

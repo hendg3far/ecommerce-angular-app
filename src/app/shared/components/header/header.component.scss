@@ -1,0 +1,19 @@
+.btn-cart {
+    position: relative
+}
+
+.btn-cart .items-no {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 8px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-family: var(--fw-bd);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

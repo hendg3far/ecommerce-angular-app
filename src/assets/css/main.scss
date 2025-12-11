@@ -1,6 +1,11 @@
 @import './variables';
+@import './forms';
 
 body {
     font-family: var(--font-family-main);
     color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
 }
