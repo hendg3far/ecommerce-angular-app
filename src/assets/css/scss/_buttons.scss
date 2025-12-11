@@ -1,0 +1,81 @@
+.btn {
+    transition: var(--transition-fast) var(--transition-effect);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sm {
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 11px;
+}
+
+.btn-md {
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.btn-lg {
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: var(--fs-md);
+}
+
+.btn-light-color {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--secondary-color) !important;
+        border-color: var(--secondary-color) !important;
+        color: var(--white-color) !important;
+    }
+}
+
+.btn-primary-color {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--dark-primary-color) !important;
+        border-color: var(--dark-primary-color) !important;
+        color: var(--white-color) !important;
+    }
+}
+
+.btn-secondary-color {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--dark-secondary-color) !important;
+        border-color: var(--dark-secondary-color) !important;
+        color: var(--white-color) !important;
+    }
+}
+
+.btn-danger {
+    background-color: #f94e5e;
+    border-color: #f94e5e;
+
+    &:hover {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+}

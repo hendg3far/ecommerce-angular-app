@@ -27,8 +27,9 @@
 
                     <div *ngIf="error" class="text-danger mt-2">{{ error }}</div>
                 </form>
-                <p class="text-center">
-                    Don't have an account? <a class="text-decoration-underline" href="./register.html">Sign Up</a>
+                <p class="text-center mt-2">
+                    Don't have an account? <a class="text-decoration-underline" [routerLink]="['/auth/register']">Sign
+                        Up</a>
                 </p>
             </div>
         </div>

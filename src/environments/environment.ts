@@ -7,4 +7,8 @@ export const environment = {
     register: 'auth/signup',
     verifyToken: 'auth/verifyToken',
   },
+
+  categories: {
+    getAll: 'categories',
+  },
 };

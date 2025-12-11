@@ -1,5 +1,5 @@
 import { Resolve, ResolveFn, Router } from '@angular/router';
-import { AuthStorageService } from '../services/auth-storage.service';
+import { AuthStorageService } from '../services/auth/auth-storage.service';
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 

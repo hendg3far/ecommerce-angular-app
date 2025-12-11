@@ -1,5 +1,6 @@
-@import './variables';
-@import './forms';
+@import './scss/variables';
+@import './scss/forms';
+@import './scss/buttons';
 
 body {
     font-family: var(--font-family-main);
@@ -8,4 +9,38 @@ body {
 
 img {
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: color var(--transition-fast) var(--transition-effect);
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    &.text-white-color {
+        color: var(--white-color);
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+
+    .text-primary-color {
+        color: var(--primary-color);
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+
+    .text-secondary-color {
+        color: var(--secondary-color);
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
 }

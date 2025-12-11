@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthService } from '../../../core/services/auth.service';
-import { Router } from '@angular/router';
-import { LoginRequest } from '../../../core/models/login-request';
+import { AuthService } from '../../../core/services/auth/auth.service';
+import { Router, RouterLink } from '@angular/router';
+import { LoginRequest } from '../../../core/models/auth/login-request';
 import { CommonModule } from '@angular/common';
-import { AuthStorageService } from '../../../core/services/auth-storage.service';
+import { AuthStorageService } from '../../../core/services/auth/auth-storage.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -21,7 +21,9 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router, private storage: AuthStorageService) {
+    private router: Router,
+    private storage: AuthStorageService
+  ) {
 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -46,12 +48,14 @@ export class LoginComponent {
       next: (response) => {
         if (this.loginForm.value.remember) {
           this.storage.setToken(response.token);
+        } else {
+          this.storage.setToken(response.token);
         }
 
         this.storage.setUser(response.user);
-        this.storage.setToken(response.token);
         this.router.navigate(['/account']);
       },
+
       error: (err) => {
         this.error = err.error?.message || 'Login failed. Please try again.';
         this.loading = false;

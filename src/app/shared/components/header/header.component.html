@@ -144,138 +144,28 @@
                                 </svg>
                             </a>
 
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <nav class="navbar navbar-expand-lg bg-white-color rounded-top-1 position-relative p-lg-0 py-2">
+        <nav class="navbar navbar-expand-lg bg-white-color rounded-top-1 position-relative p-lg-0 py-2">
             <div class="col-lg-9" style="max-width: 100%;">
                 <div class="NavigationScrollHandler_container px-sm-4 px-2">
-                    <button class="NavigationScrollHandler_arrow left" style="display: none;">❮</button>
                     <div class="NavigationScrollHandler_content mx-4" id="navScroll">
                         <ul class="SiteNavigationV3_wrapper">
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Electronics</a>
-                                <div class="dropdown-menu dropdown-menu-hover w-100 start-0 rounded-top-0">
-                                    <div class="container">
-                                        <div class="row row-gap-4">
-                                            <div class="col-lg-3">
-                                                <p><a class="fw-md text-uppercase" href="#">MOBILES &amp;
-                                                        ACCESSORIES</a></p>
-                                                <div class="d-flex flex-column">
-                                                    <div><a class="dropdown-item" href="#">iPhones</a></div>
-                                                    <div><a class="dropdown-item" href="#">Tablets</a></div>
-                                                    <div><a class="dropdown-item" href="#">Headsets &amp; Speakers</a>
-                                                    </div>
-                                                    <div><a class="dropdown-item" href="#">Power Banks</a></div>
-                                                    <div><a class="dropdown-item" href="#">Wearables</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <p><a class="fw-md text-uppercase" href="#">LAPTOPS &amp;
-                                                        ACCESSORIES</a></p>
-                                                <div class="d-flex flex-column">
-                                                    <div><a class="dropdown-item" href="#">MacBooks</a></div>
-                                                    <div><a class="dropdown-item" href="#">Gaming Laptops</a></div>
-                                                    <div><a class="dropdown-item" href="#">Printers</a></div>
-                                                    <div><a class="dropdown-item" href="#">Monitors</a></div>
-                                                    <div><a class="dropdown-item" href="#">Input Devices</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <p><a class="fw-md text-uppercase" href="#">GAMING ESSENTIALS</a>
-                                                </p>
-                                                <div class="d-flex flex-column">
-                                                    <div><a class="dropdown-item" href="#">Gaming Consoles</a></div>
-                                                    <div><a class="dropdown-item" href="#">Gaming Accessories</a>
-                                                    </div>
-                                                    <div><a class="dropdown-item" href="#">Video Games</a></div>
-                                                    <div><a class="dropdown-item" href="#">Gaming Monitors</a></div>
-                                                    <div><a class="dropdown-item" href="#">Digital Cards</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 d-lg-block d-none">
-                                                <img src="https://placehold.co/300x300/" alt="product name"
-                                                    loading="lazy">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                            <li class="SiteNavigationV3_categoryItem" *ngFor="let cat of categories; index as i">
+                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">{{ cat.name }}</a>
                             </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Home Appliances</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Fashion</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Beauty</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Sports</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Automotive</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Toys</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Groceries</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Home Appliances</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Fashion</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Beauty</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Sports</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Automotive</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Toys</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Groceries</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Home Appliances</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Fashion</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Beauty</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Sports</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Automotive</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Toys</a>
-                            </li>
-                            <li class="SiteNavigationV3_categoryItem dropdown position-static">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">Groceries</a>
-                            </li>
+
                         </ul>
                     </div>
-                    <button class="NavigationScrollHandler_arrow right" style="display: block;">❯</button>
                 </div>
             </div>
             <div class="col-lg-3 d-lg-block d-none">
                 <div class="d-flex justify-content-end pe-lg-4 pe-3 gap-sm-4 gap-3 ms-auto">
-                    <a href="">
+                    <a *ngIf="!isLoggedIn" [routerLink]="['/auth/login']">
                         <span class="text-primary-color">
                             <svg fill="currentColor" width="24" height="24" viewBox="0 0 1024 1024"
                                 xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -285,6 +175,18 @@
                             </svg>
                         </span>
                         <span>Login</span>
+                    </a>
+
+                    <a *ngIf="isLoggedIn" (click)="logout()" style="cursor:pointer;">
+                        <span class="text-primary-color">
+                            <svg fill="currentColor" width="24" height="24" viewBox="0 0 1024 1024"
+                                xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path
+                                    d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1 520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span>Sign Out</span>
                     </a>
                     <span style="height: 20px;width: 1px;background-color: #ededed;"></span>
                     <a href="">
@@ -303,6 +205,6 @@
                     </a>
                 </div>
             </div>
-        </nav> -->
+        </nav>
     </div>
 </header>

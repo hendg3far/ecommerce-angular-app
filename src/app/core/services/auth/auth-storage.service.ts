@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { User } from "../models/user";
+import { User } from "../../models/auth/user";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: 'root',
@@ -7,6 +8,11 @@ import { User } from "../models/user";
 export class AuthStorageService {
   private readonly TOKEN_KEY = 'token';
   private readonly USER_KEY = 'user';
+
+  private authState = new BehaviorSubject<boolean>(this.hasToken());
+
+  authState$ = this.authState.asObservable();
+
 
   setToken(token: string, remember: boolean = true) {
     if (remember) {
@@ -40,4 +46,16 @@ export class AuthStorageService {
     sessionStorage.removeItem(this.TOKEN_KEY);
     sessionStorage.removeItem(this.USER_KEY);
   }
+
+
+  signOut() {
+    localStorage.removeItem(this.TOKEN_KEY);
+    localStorage.removeItem(this.USER_KEY);
+    this.authState.next(false);
+  }
+
+  hasToken(): boolean {
+    return !!localStorage.getItem(this.TOKEN_KEY);
+  }
+
 }

@@ -7,19 +7,35 @@
             <div class="col-lg-5 offset-lg-1">
                 <h5 class="fw-sb">Create New Account.</h5>
                 <p class="mb-md">Welcome! Subscribe with your email</p>
-                <form class="mb-rg">
+                <form class="mb-rg" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="row row-gap-2 mb-md">
                         <div class="col-sm-12">
-                            <input type="text" class="form-control form-control-lg" placeholder="Username">
+                            <input type="text" class="form-control form-control-lg" placeholder="Username"
+                                formControlName="name">
                         </div>
                         <div class="col-sm-12">
-                            <input type="email" class="form-control form-control-lg" placeholder="Email address">
+                            <input type="email" class="form-control form-control-lg" placeholder="Email address"
+                                formControlName="email">
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control form-control-lg" placeholder="Phone number"
+                                formControlName="phone">
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div
+                                *ngIf="registerForm.get('phone')?.errors?.['pattern'] && registerForm.get('phone')?.touched">
+                                Invalid phone number
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control form-control-lg" placeholder="Password"
+                                formControlName="password">
                         </div>
                         <div class="col-sm-6">
-                            <input type="password" class="form-control form-control-lg" placeholder="Password">
-                        </div>
-                        <div class="col-sm-6">
-                            <input type="password" class="form-control form-control-lg" placeholder="Repeat Password">
+                            <input type="password" class="form-control form-control-lg" placeholder="Repeat Password"
+                                formControlName="rePassword">
                         </div>
 
                     </div>
@@ -29,10 +45,16 @@
                                 class="text-decoration-underline">Terms and Conditions</a> and <a
                                 class="text-decoration-underline" href="#">Privacy Policy</a></label>
                     </div>
-                    <input type="text" class="btn btn-secondary-color btn-lg w-100" value="Sign up">
+
+
+                    <div *ngIf="error" class="alert alert-danger my-2">{{ error }}</div>
+
+                    <button type="submit" class="btn btn-secondary-color btn-lg w-100" [disabled]="loading">
+                        {{ loading ? 'Logging in...' : 'Sign up' }}
+                    </button>
                 </form>
                 <p class="text-center">Already have an account? <a class="text-decoration-underline"
-                        href="./login.html">Sign in</a></p>
+                        [routerLink]="['/auth/login']">Sign in</a></p>
             </div>
         </div>
     </div>

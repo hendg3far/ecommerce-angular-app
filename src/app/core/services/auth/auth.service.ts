@@ -1,11 +1,11 @@
 import { inject, Injectable } from '@angular/core';
-import { ApiService } from './api.service';
+import { ApiService } from '../api.service';
 import { AuthStorageService } from './auth-storage.service';
-import { AuthResponse } from '../models/auth-response';
-import { environment } from '../../../environments/environment';
+import { AuthResponse } from '../../models/auth/auth-response';
+import { environment } from '../../../../environments/environment';
 import { catchError, Observable, tap, throwError } from 'rxjs';
-import { LoginRequest } from '../models/login-request';
-import { RegisterRequest } from '../models/register-request';
+import { LoginRequest } from '../../models/auth/login-request';
+import { RegisterRequest } from '../../models/auth/register-request';
 
 @Injectable({
   providedIn: 'root',
@@ -37,4 +37,10 @@ export class AuthService {
       })
     );
   }
+
+
+  logout() {
+    this.storage.clear();
+  }
+
 }

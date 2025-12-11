@@ -8,11 +8,13 @@ input-sm {
 .form-control-md,
 input-md {
     height: 50px;
+    font-size: var(--fs-rg);
 }
 
 .form-control-lg,
 input-lg {
     height: 60px;
+    font-size: var(--fs-md);
 }
 
 .form-control-1 {
