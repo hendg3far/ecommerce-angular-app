@@ -6,8 +6,8 @@
 }
 
 .star {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     background:
         linear-gradient(90deg, #f5c949 var(--fill), #eee var(--fill));
     -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14"><path d="M7.2 10.5609L11.6437 13.7953L9.95625 8.52185L14.4 5.39998H9L7.2 -2.38419e-05L5.4 5.39998H0L4.44375 8.52185L2.75625 13.7953L7.2 10.5609Z"/></svg>') center/contain no-repeat;

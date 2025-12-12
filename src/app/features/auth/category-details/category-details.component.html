@@ -3,7 +3,8 @@
     <div class="spinner-border" role="status"></div>
 </div>
 
-<div class="pt-xl pb-xl">
+
+<div class="pt-xl pb-xl" *ngIf="products && products.length > 0; else noProducts">
     <div class="container">
         <div>
             <div class="row row-gap-4">
@@ -14,3 +15,12 @@
         </div>
     </div>
 </div>
+
+
+<ng-template #noProducts>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <h5>No products found in this category.</h5>
+        </div>
+    </div>
+</ng-template>

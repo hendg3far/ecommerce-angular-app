@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../../core/models/product';
 import { CommonModule } from '@angular/common';
+import { ClampTextDirective } from "../../../core/directives/clamp-text.directive";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ClampTextDirective, RouterLink],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
 })

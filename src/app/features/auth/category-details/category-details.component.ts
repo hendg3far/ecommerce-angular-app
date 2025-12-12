@@ -18,7 +18,7 @@ export class CategoryDetailsComponent {
 
   category!: Category;
   products: Product[] = [];
-
+  loading: boolean = true;
 
   constructor(
     private categoryService: CategoryService,
@@ -49,12 +49,15 @@ export class CategoryDetailsComponent {
   }
 
   getProductsByCategory(categoryId: string): void {
+    this.loading = true;
     this.categoryService.getProductsByCategory(categoryId).subscribe({
       next: (response) => {
         this.products = response.data;
+        this.loading = false;
         console.log('Products in category:', this.products);
       },
       error: (err) => {
+        this.loading = false;
         console.error('Error fetching products by category:', err);
       }
     });
