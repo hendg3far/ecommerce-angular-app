@@ -18,5 +18,11 @@ export const routes: Routes = [
     loadComponent: () => import('./features/account/profile/profile.component').then((m) => m.ProfileComponent),
     canActivate: [AuthGuard],
     resolve: { user: UserResolver }
+  },
+  {
+    path: 'category/:id',
+    loadComponent: () =>
+      import('./features/category-details/category-details.component')
+        .then(m => m.CategoryDetailsComponent)
   }
 ];

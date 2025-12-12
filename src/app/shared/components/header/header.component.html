@@ -156,7 +156,8 @@
                         <ul class="SiteNavigationV3_wrapper">
 
                             <li class="SiteNavigationV3_categoryItem" *ngFor="let cat of categories; index as i">
-                                <a class="SiteNavigationV3_categoryLink" href="#" role="button">{{ cat.name }}</a>
+                                <a class="SiteNavigationV3_categoryLink" [routerLink]="['/category', cat._id]"
+                                    role="button">{{ cat.name }}</a>
                             </li>
 
                         </ul>

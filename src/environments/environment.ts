@@ -11,4 +11,8 @@ export const environment = {
   categories: {
     getAll: 'categories',
   },
+
+  products: {
+    getAll: 'products',
+  },
 };
