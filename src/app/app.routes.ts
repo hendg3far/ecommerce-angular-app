@@ -22,7 +22,7 @@ export const routes: Routes = [
   {
     path: 'category/:id',
     loadComponent: () =>
-      import('./features/category-details/category-details.component')
+      import('./features/categories/category-details/category-details.component')
         .then(m => m.CategoryDetailsComponent)
   }
 ];

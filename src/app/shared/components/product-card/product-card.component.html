@@ -1,0 +1,33 @@
+<div class="block-item product-item h-100">
+    <div class="block-image position-relative mb-2">
+        <a href="#">
+            <img class="w-100" [src]="product.imageCover" alt="no-photo" loading="lazy" style="aspect-ratio: 12/12;">
+        </a>
+
+        <div class="hidden position-absolute bottom-0 start-0">
+            <div class="d-flex gap-1">
+                <a href="#" class="btn btn-sm btn-light-color border-0">
+                    <span>Add to cart</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-content">
+        <a class="fw-md fs-rg d-block lh-sm mb-1" href="#">
+            {{ product.title }}
+        </a>
+
+        <div class="rating d-flex align-items-center gap-1 mb-2">
+            <ng-container *ngFor="let s of [1,2,3,4,5]">
+                <div class="star" [style.--fill]="getStarFill(product.ratingsAverage, s)"></div>
+            </ng-container>
+
+            <span>({{ product.ratingsAverage }})</span>
+        </div>
+
+        <span class="text-secondary-color fw-sb">
+            {{ product.price }} <small>EGP</small>
+        </span>
+    </div>
+</div>

@@ -1,30 +1,23 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ActivatedRoute, Params, ɵEmptyOutletComponent } from '@angular/router';
-import { Category } from '../../core/models/category';
-import { Product } from '../../core/models/product';
-import { CategoryService } from '../../core/services/category.service';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-import { faStar as faStarSolid, faStarHalfStroke, faStar as faStarRegular } from '@fortawesome/free-solid-svg-icons';
+import { Category } from '../../../core/models/category';
+import { Product } from '../../../core/models/product';
+import { CategoryService } from '../../../core/services/category.service';
+import { ProductCardComponent } from "../../../shared/components/product-card/product-card.component";
 
 
 @Component({
   selector: 'app-category-details',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, ProductCardComponent],
   templateUrl: './category-details.component.html',
   styleUrls: ['./category-details.component.scss'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CategoryDetailsComponent {
 
   category!: Category;
   products: Product[] = [];
-
-  faStarFull = faStarSolid;
-  faStarHalf = faStarHalfStroke;
-  faStarEmpty = faStarRegular;
 
 
   constructor(
